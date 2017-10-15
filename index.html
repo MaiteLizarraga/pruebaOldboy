@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Login Oldboy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" media="screen">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="compass/loader_styles/stylesheets/screen.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <div class="wrapper col-xs-12" id="wrapperLogin">
+        <header class="headerLogin">
+            <h1>LOGIN TO YOUR ACCOUNT</h1>
+        </header>
+        <section class="formLogin">
+            <form method="post">
+                <fieldset class="form-group">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                </fieldset>
+                <div class="wrapperLogin col-sm-12 col-xs-12">
+                    <a href="#">Forgot password?</a>
+                    <button type="submit" class="btn btn-primary" onclick="enviar();">Sign In</button>
+                    <div class="loaderBox col-sm-12 col-xs-12" id="loaderBox" style="display:none">
+                        <div class="loaderSpinner">
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                        </div>
+                        <div class="loader">
+                            <p>loading</p>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function enviar(){
+        var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!regexEmail.test(inputEmail.value)) {
+            alert('Invalid Email Address');
+            inputEmail.focus;
+            return false;
+        }
+        if (inputPassword.value.length==0) {
+            alert("please, check your password");
+            inputEmail.focus;
+            return false;
+        }
+        if (inputEmail.value.length==0 || inputPassword.value.length==0) {
+            alert("please, check your email or password");
+        } else {
+            $("#loaderBox").show();
+            setTimeout(function(){
+                $("#loaderBox").hide();
+                window.open("submitted.html", "_self");
+            }, 5000);
+            event.preventDefault();
+        };
+    };
+</script>

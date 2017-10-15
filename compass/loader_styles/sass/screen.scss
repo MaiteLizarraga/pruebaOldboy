@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "compass/css3";
+
+// LOADER PUNTITOS
+
+$loader-count: 3;
+$loader-delay: 0.2;
+$loader-color: white;
+$loader-size: 5px;
+
+.loader > span {
+    display: inline-block;
+    width: $loader-size;
+    height: $loader-size;
+    margin: 0 1px;
+    background: $loader-color;
+    opacity: 0;
+    -webkit-animation: loader-fade 2s infinite;
+    -moz-animation: loader-fade 2s infinite;
+    -o-animation: loader-fade 2s infinite;
+    -ms-animation: loader-fade 2s infinite;
+    animation: loader-fade 2s infinite;
+    @include border-radius(50%);
+}
+
+@for $j from 1 through $loader-count {
+    .loader > span:nth-child(#{$j}) {
+        -webkit-animation-delay: $loader-delay * $j + s;
+        -moz-animation-delay: $loader-delay * $j + s;
+        -o-animation-delay: $loader-delay * $j + s;
+        -ms-animation-delay: $loader-delay * $j + s;
+        animation-delay: $loader-delay * $j + s;
+    }
+}
+
+@-webkit-keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+@keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+.loader {
+    background-color: #BA3B23;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 500px;
+}
+div.loader p, div.loader span {
+    display: inline-block;
+}
+
+// LOADER JELLY
+
+$body-bg:        white;
+$jelly-color:    #FB6539;
+$size: 50px;
+
+.loaderSpinner {
+    background-color: #BA3B23;
+    position: absolute;
+    top: 25%;
+    left: -20px;
+    width: 500px;
+    height: 150px;
+}
+
+.ball {
+    position: absolute;
+    left: 25%;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: rgba($jelly-color, .2);
+    animation: jelly 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+
+    @for $i from 2 through 4 {
+        &:nth-child(#{$i}) {
+            z-index: $i;
+            transform: scale(1 + ($i - 1) * 0.4);
+            animation: jelly#{$i} 2.5s (($i - 1) * 0.2s) cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+    }
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes jelly2 {
+    0% {
+        transform: scale(1.4);
+    }
+    45% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.4);
+    }
+}
+@keyframes jelly3 {
+    0% {
+        transform: scale(1.8);
+    }
+    40% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.8);
+    }
+}
+@keyframes jelly4 {
+    0% {
+        transform: scale(2.2);
+    }
+    35% {
+        transform: scale(1.9);
+    }
+    100% {
+        transform: scale(2.2);
+    }
+}

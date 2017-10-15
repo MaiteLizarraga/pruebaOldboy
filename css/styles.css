@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #81CDD1;
+}
+div.wrapper {
+    width: 500px;
+    height: 435px;
+    margin: 5% auto;
+    display: block;
+    padding: 1% 0 0 0;
+    background-color: #FB6539;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 7px;
+}
+header.headerLogin {
+    padding: 7%;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-shadow: 1px 0px #000;
+}
+
+/*FORM STYLES*/
+
+fieldset {
+    background-color: #BA3B23;
+    border-radius: 7px;
+    margin: 0 8%;
+}
+input.form-control, input.form-control:active, input.form-control:focus, input.form-control:visited {
+    background-color: #BA3B23 !important;
+    color: white !important;
+    font-family: 'Open Sans';
+    font-size: 0.6em;
+    padding: 4%;
+    border: none;
+    border-radius: 7px;
+}
+input#inputEmail::-webkit-input-placeholder {color:white;}
+input#inputEmail::-moz-placeholder          {color:white;}
+input#inputEmail:-moz-placeholder           {color:white;}
+input#inputEmail:-ms-input-placeholder      {color:white;}
+
+input#inputPassword::-webkit-input-placeholder {color:white;}
+input#inputPassword::-moz-placeholder          {color:white;}
+input#inputPassword:-moz-placeholder           {color:white;}
+input#inputPassword:-ms-input-placeholder      {color:white;}
+
+input#inputEmail:-webkit-autofill,
+input#inputEmail:-webkit-autofill:hover,
+input#inputEmail:-webkit-autofill:focus,
+input#inputEmail:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px #BA3B23 inset;
+    -webkit-text-fill-color: white !important;
+}
+
+/*LOGIN SECTION STYLES*/
+
+div.wrapperLogin {
+    width: 500px;
+    height: 160px;
+    margin-top: 10%;
+    background-color: #BA3B23;
+    padding: 8%;
+    color: white;
+    border-radius: 0 0 7px 7px;
+    overflow: hidden;
+}
+a {
+    color: white;
+    font-size: 0.8em;
+    float: left;
+    padding-top: 5%;
+}
+a:hover {
+    color: #81CDD1;
+    text-decoration: none;
+}
+button.btn.btn-primary {
+    background: white;
+    border: white;
+    padding: 5% 15%;
+    color: #BA3B23;
+    font-size: 0.8em;
+    float: right;
+    border-radius: 7px;
+}
+button.btn.btn-primary:hover {
+    background-color: #81CDD1;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.loaderBox {
+    background-color: #BA3B23;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 150px;
+    margin-top: 2%;
+    display: block;
+}
+
+/*SUBMITTED PAGE*/
+
+section.contactInfo {
+    overflow: auto;
+    padding: 0 5%;
+}
+section.contactInfo img {
+    display: inline-block;
+    float: left;
+    border: 8px solid white;
+    border-radius: 12px;
+    width: auto;
+    height: 150px;
+}
+article.contactData {
+    padding-top: 30px;
+    overflow: auto;
+    padding-left: 4%;
+}
+article.contactData h1 {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: left;
+    width: auto;
+}
+button.btn.btn-primary.secondary {
+    display: inline-block;
+    width: 27%;
+    padding: 2% 0%;
+    font-size: 14px;
+    margin: 0;
+    float: none;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+button.btn.btn-primary.secondary:hover {
+    background:white;
+    color: #BA3B23;
+    border: none;
+    border: 1px solid white;
+}
+div.wrapperStay {
+    margin: 4% 0;
+    padding: 6%;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1680px) {}
+@media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1366px) {}
+@media screen and (max-width: 1216px) {}
+@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1140px) {}
+@media screen and (max-width: 1040px) {}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 979px) {}
+@media screen and (max-width: 767px) {}
+@media screen and (max-width: 660px) {}
+@media screen and (max-width: 600px) {}
+@media screen and (max-width: 479px) {
+    div.wrapper {
+        margin: 12% auto;
+    }
+}
+@media screen and (max-width: 414px) {}
+@media screen and (max-width: 375px) {}
+@media screen and (max-width: 360px) {}
+@media screen and (max-width: 320px) {}

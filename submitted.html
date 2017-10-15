@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Login Oldboy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper col-sm-12 col-xs-12">
+            <header class="headerLogin">
+                <h1>WELCOME BACK</h1>
+            </header>
+            <div class="col-md-12 col-sm-12 col-xs-6">
+                <section class="contactInfo">
+                    <div class="col-xs-6">
+                        <img src="img/chico.jpeg" alt="persona">
+                    </div>
+                    <div class="col-xs-6">
+                        <article class="contactData">
+                            <h1>ALEX DEGTYARIK</h1>
+                            <button type="button" name="button" class="btn btn-primary secondary">Messages</button>
+                            <button type="button" name="button" class="btn btn-primary secondary">Profile</button>
+                            <button type="submit" name="submit" class="btn btn-primary secondary" onclick="volver()">Sign Out</button>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="wrapperLogin wrapperStay col-sm-12 col-xs-12">
+                <h1>SUCCESS</h1>
+                <button type="button" name="button" class="btn btn-primary secondary">Stay signed in</button>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function volver(){
+        window.location.assign("index.html");
+    };
+</script>

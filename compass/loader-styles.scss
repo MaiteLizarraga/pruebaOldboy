@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "compass/css3";
+
+$loader-count: 3;
+$loader-delay: 0.2;
+$loader-color: #fff;
+$loader-size: 20px;
+
+.loader > span {
+    display: inline-block;
+    width: $loader-size;
+    height: $loader-size;
+    margin: 0 4px;
+    background: $loader-color;
+    opacity: 0;
+    @include border-radius(50%);
+
+    -webkit-animation: loader-fade 1s infinite;
+    -moz-animation: loader-fade 1s infinite;
+    -o-animation: loader-fade 1s infinite;
+    -ms-animation: loader-fade 1s infinite;
+    animation: loader-fade 1s infinite;
+}
+
+@for $i from 1 through $loader-count {
+    .loader > span:nth-child(#{$i}) {
+        -webkit-animation-delay: $loader-delay * $i + s;
+        -moz-animation-delay: $loader-delay * $i + s;
+        -o-animation-delay: $loader-delay * $i + s;
+        -ms-animation-delay: $loader-delay * $i + s;
+        animation-delay: $loader-delay * $i + s;
+    }
+}
+
+@-webkit-keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+@keyframes loader-fade {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+
+/* =* DEMO *= */
+body {
+    background: orange;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
